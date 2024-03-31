@@ -1,7 +1,6 @@
 package org.example
 
 fun main() {
-    val gestorBiblioteca = GestorBiblioteca()
     val biblioteca = GestorBiblioteca()
 
     // Agregar libros al catálogo
@@ -10,11 +9,11 @@ fun main() {
     biblioteca.agregarLibro(Libro("","Las aventuras de Sherlock Holmes","Arthur Conan Doyle",1887,"Policiaca"))
 
     // Realizar préstamos y devoluciones
-    gestorBiblioteca.registrarPrestamo("1", "usuario1")
-    gestorBiblioteca.registrarPrestamo("2", "usuario2")
-    gestorBiblioteca.devolverLibro("1")
-    gestorBiblioteca.devolverLibro("3")
+    biblioteca.registrarPrestamo("1", "usuario1")
+    biblioteca.registrarPrestamo("2", "usuario2")
+    biblioteca.devolverLibro("1")
+    biblioteca.devolverLibro("3")
 
     // Mostrar los libros
-    gestorBiblioteca.mostrarCatalogo()
+    biblioteca.mostrarCatalogo()
 }

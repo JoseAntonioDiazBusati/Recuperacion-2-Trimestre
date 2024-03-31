@@ -14,4 +14,23 @@ class Libro(
         require(anoPublicacion > 0) { "El año de publicación del libro debe ser un valor positivo." }
         require(tematica.isNotBlank()) { "La temática del libro no puede estar vacía." }
     }
+    fun getId(): String {
+        return id
+    }
+
+    fun getTitulo(): String {
+        return titulo
+    }
+
+    fun getAutor(): String {
+        return autor
+    }
+
+    fun getAnoPublicacion(): Int {
+        return anoPublicacion
+    }
+
+    fun getTematica(): String {
+        return tematica
+    }
 }
