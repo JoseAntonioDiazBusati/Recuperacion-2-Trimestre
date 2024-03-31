@@ -27,7 +27,7 @@ class GestorBiblioteca(
         val libro = catalogo.find { it.id == idLibro }
         if (libro != null && libro.estado == EstadoLibro.DISPONIBLE) {
             libro.estado = EstadoLibro.PRESTADO
-            registroPrestamos.add(Prestamo(libro.id, idUsuario, LocalDate.now()))
+            RegistroPrestamo.add(Prestamo(libro.id, idUsuario, LocalDate.now()))
         } else {
             println("El libro no está disponible para préstamo.")
         }

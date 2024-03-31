@@ -1,6 +1,6 @@
 package org.example
 
-class ResgistroPrestamo {
+class RegistroPrestamo {
     private val prestamosActuales = mutableListOf<Prestamo>()
     private val historialPrestamos = mutableListOf<Prestamo>()
 
