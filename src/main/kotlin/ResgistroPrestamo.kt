@@ -25,4 +25,5 @@ class ResgistroPrestamo {
     fun consultarHistorialPrestamosUsuario(usuario: Usuario): List<Prestamo> {
         return historialPrestamos.filter { usuario == usuario }
     }
+
 }

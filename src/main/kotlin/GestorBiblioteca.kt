@@ -2,9 +2,10 @@ package org.example
 
 import java.time.LocalDate
 
-class GestorBiblioteca {
-    private val catalogo = mutableListOf<Libro>()
-    private val registroPrestamos = mutableListOf<Prestamo>()
+class GestorBiblioteca(
+    private val gestorPrestamos: IGestorPrestamos,
+    private val catalogo: MutableList<ElementoBiblioteca>
+) {
 
     fun agregarLibro(libro: Libro) {
         val id = UtilidadesBiblioteca.generarIdentificadorUnico()
