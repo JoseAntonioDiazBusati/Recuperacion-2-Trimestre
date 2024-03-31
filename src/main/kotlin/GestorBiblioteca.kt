@@ -7,7 +7,10 @@ class GestorBiblioteca {
     private val registroPrestamos = mutableListOf<Prestamo>()
 
     fun agregarLibro(libro: Libro) {
-        catalogo.add(libro)
+        val id = UtilidadesBiblioteca.generarIdentificadorUnico()
+        val libroConId = Libro(id, libro.titulo, libro.autor, libro.anoPublicacion, libro.tematica)
+        catalogo.add(libroConId)
+        println("Libro agregado al catálogo con ID: $id")
     }
 
     fun eliminarLibro(idLibro: String) {
@@ -58,5 +61,6 @@ class GestorBiblioteca {
             println("ID: ${libro.id}, Título: ${libro.titulo}, Autor: ${libro.autor}, Estado: ${libro.estado}")
         }
     }
+
 }
 
